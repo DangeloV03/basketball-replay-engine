@@ -1,0 +1,27 @@
+# Dev notes
+prd.md
+CLAUDE.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+*.egg-info/
+
+# Model weights (large binaries — download automatically via ultralytics)
+*.pt
+
+# Input videos and generated outputs
+data/
+outputs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db

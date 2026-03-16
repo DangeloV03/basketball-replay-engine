@@ -1,0 +1,39 @@
+input_video: "data/input.mp4"
+output_dir: "outputs"
+calibration_frame_idx: 0        # which frame index to use for calibration
+calibration_preset: "4corner"   # "4corner" or "6point"
+calibration_load: null          # path to existing calibration JSON, or null to run interactive
+
+detection:
+  confidence_threshold: 0.4
+
+tracking:
+  max_match_distance: 60
+  max_stale_frames: 8
+
+projection:
+  clamp_to_court: true
+
+ball_detection:
+  enabled: true
+  confidence_threshold: 0.15    # lower than players — ball is small and fast
+
+team_classifier:
+  n_clusters: 3                 # Team A, Team B, Referee/Other
+  sample_every: 5               # stride for collecting fit samples
+
+jersey_ocr:
+  enabled: true                 # set false if PaddleOCR is not installed
+  read_every: 10                # frames between OCR attempts per track
+  lock_votes: 3                 # consistent reads needed to lock a jersey number
+
+render:
+  show_trails: true
+  trail_length: 15
+  show_ids: true
+  marker_radius: 8
+  show_skeleton: true           # draw pose skeleton on overlay video
+
+video:
+  resize_width: 1280
+  process_every_nth_frame: 1

@@ -2,6 +2,10 @@
 
 A prototype computer vision system that takes a short basketball broadcast clip and reconstructs player movement as a top-down animated mini replay.
 
+<video src="https://github.com/user-attachments/assets/73401859-f917-4488-b5e6-e674bf45c5d8
+" width="600" controls></video>
+
+
 ## What it does
 
 1. Loads a local `.mp4` basketball clip
